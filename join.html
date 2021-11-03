@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Brand Name | Join</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <!--Logo-->
+            <div class="brand-name"><a href="index.html">Brand Name</a></div>
+            <!--Hamburger menu for mobile version-->
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <!--Nav links-->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="login.html">sign in</a></li>
+                    <li><a href="join.html">join</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="new-member-form">
+            <h2>Join us today!</h2>
+            <form action="#" method="GET" id="contact-form">
+                <p>
+                    <label for="city">
+                        Choose your location
+                    </label>
+                    <select name="city" id="city">
+                        <option value="Gothenburg">Gothenburg</option>
+                        <option value="Stockholm">Stockholm</option>
+                        <option value="Malmö">Malmö</option>
+                    </select>
+                </p>
+
+                <p>What kind of membership do you prefer?</p>
+                <div class="radio-buttons">
+                    <input type="radio" name="membership" value="regular" id="regular">
+                    <label for="regular">Regular</label>
+                    <input type="radio" name="membership" value="student" id="student">
+                    <label for="student">Student</label>
+                    <input type="radio" name="membership" value="senior" id="senior">
+                    <label for="senior">Senior</label>
+                </div>
+            </form>
+        </div>
+
+        <!--This button will have a function that when clicked, more input fields will be shown. Those input fields will ask for more personal data needed for registering a new member. -->
+        <a class="button" href="#">continue</a>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2021 theBrand.com</p>
+        <p>Social media links</p>
+        <p><a href="cookies.html">Cookies and person data</a></p>
+    </footer>
+
+    <!--Script to toggle hamburger menu-->
+    <script src="script.js"></script>
+</body>
+
+</html>

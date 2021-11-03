@@ -1,0 +1,316 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/*Overall styles. Choosen font styles, one imported and one backup style. Removed all default margins. Centered all text in the middle. */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; 
+  text-align: center; 
+}
+
+/*Main content left and right margins will be automatically calculated by browser. Max-width is for the cases when the viewport is very wide.
+ Min-height is so the footer stays at the bottom when main content is small. */
+main {
+  max-width: 1000px; 
+  margin: auto; 
+  min-height: 80vh; 
+}
+
+/*Navbar styles. Position fixed will make the navbar always visible at the top of the viewport when scrolling down the page. */
+.navbar {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%; 
+  
+}
+
+.brand-name a{
+  font-size: 1.8em;
+  margin: .5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none; 
+}
+
+.nav-links li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 1em;
+  display: block;
+}
+
+/*Style when hovering over links*/
+.navbar a:hover {
+  color: #666;
+}
+
+
+/*Hamburger menu styles*/
+.toggle-button {
+  position: absolute; /*forces it to be to the right without messing with the flow of the other elements*/
+  top: .70em;
+  right: 1em;
+  display: none; /*don't want it to show in desktop*/
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2em;
+  height:1.3em;
+}
+
+.toggle-button .bar {
+  height: 0.2em;
+  width: 100%;
+  background-color: white;
+}
+
+/*Paragraph and heading styles*/
+h1 {
+  color: white;
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.3em;
+  font-weight: 200;
+  line-height: 1.5; 
+}
+
+
+/*Image by Simon Hajducki. Downloaded from Unsplash.com*/
+.header-image {
+  background-image: url("./images/boxing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+}
+
+/* Header button style */
+.header-image a {
+  color: white;
+  border: white solid;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1%;
+  display: inline-block;
+}
+
+.header-image a:hover {
+  color:#666;
+}
+
+.header-image h3 {
+  color: white;
+}
+
+/*Main section styles*/
+main {
+  padding: 4%;
+}
+
+.flex-content {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-item {
+  margin: 1em;
+}
+
+
+/*this is so the flex row images are all in the same size and aligns perfectly*/
+.flex-item-img {
+  width:  300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+
+/*Article section*/
+.articles {
+  margin-top: 10%;
+}
+
+.article-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+}
+
+/*placeholder img by Jelmer Assink. Downloaded from Unsplah.com */
+.image img {
+  width: 100%; 
+}
+
+
+/* Button style */
+.button {
+  border: black solid;
+  font-weight: 600; 
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1%;
+  display: inline-block;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/*Join page */
+.new-member-form{
+  text-align: center; 
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.radio-buttons{
+  text-align: center;
+}
+
+/*Login page*/
+.login-form {
+  text-align: center; 
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.submit-button {
+  border: black solid;
+  background-color: white;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  padding: 1%;
+  display: inline-block;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.submit-button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+/* Footer styles*/
+footer {
+  background-color: black;
+  color: white;
+  padding: 4%;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+footer a:hover {
+  color:#666;
+}
+
+
+
+/* Media Queries*/
+
+
+/* Tablet styles. Devices Like ipad that have a 768 pixels width */
+
+@media (max-width:800px) { 
+
+  .flex-content {
+    flex-direction: column; 
+  }
+
+  .header-image {
+    background-position: center; /* on desktop, focus is on the girls head in the picture. On smaller devices it will center the upper body, head and boxing gloves */
+  }
+ 
+}
+
+
+/* Mobile devices */
+
+@media (max-width:500px) { 
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .header-image h3 {
+    display: none; /* removes the sub title from header. It would clutter when screen is small. */
+  }
+
+  .flex-content {
+    flex-direction: column;
+  }
+
+  .header-image {
+    background-position: center; 
+  }
+
+  /*Hamburger menu*/
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .nav-links li a {
+    padding: .5em 1em;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
+

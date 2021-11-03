@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Brand Name | Login</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <!--Logo-->
+            <div class="brand-name"><a href="index.html">Brand Name</a></div>
+            <!--Hamburger menu for mobile version-->
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <!--Nav links-->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="login.html">sign in</a></li>
+                    <li><a href="join.html">join</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Login form for members-->
+        <div class="login-form">
+            <h2>Sign in and work out!</h2>
+            <form action="#" method="GET" id="contact-form">
+                <p>
+                    <label>
+                        Email:
+                        <input type="email" placeholder="Enter you E-mail" name="email" required="required" />
+                    </label>
+                </p>
+                <p>
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter Password" name="psw" required="required">
+                </p>
+
+                <button class="submit-button" type="submit">sign in</button>
+
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2021 theBrand.com</p>
+        <p>Social media links</p>
+        <p><a href="cookies.html">Cookies and person data</a></p>
+    </footer>
+
+    <!--Script to toggle hamburger menu-->
+    <script src="script.js"></script>
+</body>
+
+</html>
